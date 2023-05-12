@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import "@fontsource/montez";
 import { Colors, DrawerWidth } from "../theme";
 import { textPopUpTop } from "../../animation";
+import { Link } from "react-router-dom";
 
 export const AppbarContainer = styled(Box)(() => ({    
     display: 'flex',
@@ -43,15 +44,18 @@ export const ActionIconsContainerDesktop = styled(Box)(() => ({
 export const MyList = styled(List)(({ type }) => ({
     display: type === "row" ? "flex" : "block",
     flexGrow: 3,
-  justifyContent: "center",
-  alignItems: "center",
+    gap:'40px',
+    justifyContent: "center",
+    alignItems: "center"
 }));
-
-
 
 export const DrawerCloseButton = styled(IconButton)(() => ({
   position: 'absolute',
   top: 10,
   left: DrawerWidth,
   zIndex: 1999,      
+}));
+
+export const MyLink = styled(Link)(()=>({
+  textDecoration:'none'
 }));

@@ -30,7 +30,7 @@ export default function Login({ open, onClose }) {
         event.preventDefault();
         setLoading(true);
        try {
-        await firebasedb.login({...form});
+        const res = await firebasedb.login({...form});
         onClose();
        } 
        catch (error) {

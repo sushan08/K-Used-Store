@@ -1,7 +1,8 @@
-
-import { initializeApp } from "firebase/app";
 import 'firebase/auth';
 import { createUserWithEmailAndPassword, updateProfile, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, updateDoc, doc } from "firebase/firestore";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_tdr2DV8LrIaHWjgebqIzG2EA3Ew-gtY",
@@ -11,9 +12,8 @@ const firebaseConfig = {
   messagingSenderId: "101950527856",
   appId: "1:101950527856:web:194c53fe1071ce740e97b5"
 };
-
-
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
 
 async function register ({firstname, lastname, email, password}) {
@@ -44,3 +44,37 @@ export const firebasedb ={
     login: login,
     logout: logout
 }
+
+const getCurrentUserId = () => {
+  const user = auth.currentUser;
+  if (user) {
+    return user.uid;
+  } else {
+    return null;
+  }
+}
+export default getCurrentUserId;
+
+
+
+// Get a Firestore instance
+export const db = getFirestore(app);
+
+export const addCartItemToFirestore = async (userId, cartItem) => {
+  try {
+    const userRef = doc(db, "users", userId);
+    const cartRef = collection(userRef, "cart");
+    const itemQuery = cartRef.where("id", "==", cartItem.id).limit(1);
+    const itemSnapshot = await itemQuery.get();
+
+    if (itemSnapshot.docs.length === 0) {
+      await addDoc(cartRef, cartItem);
+    } else {
+      const itemDoc = itemSnapshot.docs[0];
+      await updateDoc(itemDoc.ref, { quantity: cartItem.quantity });
+    }
+  } catch (error) {
+    console.error("Error adding cart item to Firestore: ", error);
+  }
+};
+

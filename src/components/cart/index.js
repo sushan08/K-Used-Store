@@ -4,6 +4,9 @@ import { useUIContext } from "../../context/ui";
 import { useTheme } from "@mui/material/styles";
 import {Box} from "@mui/system";
 import IncDec from "../ui/incdec";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+
 
 export default function Cart(){
     const {cart, setShowCart, showCart } = useUIContext();
@@ -41,6 +44,17 @@ export default function Cart(){
         </ Box>
         
     ));
+
+    const handleCheckout = async() =>{
+        const auth = getAuth();
+        const user = auth.currentUser;
+        if(!user){
+            alert("not logged in")
+        }else{
+            alert('bought drafter')
+        }
+    }
+
     return (
         <Drawer
         open={showCart}
@@ -78,7 +92,7 @@ export default function Cart(){
                     >
                         {cartContent}
                     </Paper>
-                    <Button sx={{mt: 4}} variant="contained">
+                    <Button sx={{mt: 4}} variant="contained" onClick={handleCheckout}>
                         Proceed to Payment
                     </Button>
                 </Box> : <Box
