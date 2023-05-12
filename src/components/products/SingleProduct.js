@@ -45,7 +45,7 @@ export default function SingleProduct({ product, matches }) {
               <FavoriteIcon />
             </ProductFavButton>
             <ProductActionButton>
-              <Tooltip placement="left" title="share this product">
+              <Tooltip placement="left" title="Share">
                 <ShareIcon color="primary" />
               </Tooltip>
             </ProductActionButton>

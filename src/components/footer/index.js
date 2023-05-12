@@ -20,8 +20,8 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        background: Colors.shaft,
-        color: Colors.white,
+        background: '#f5f5f5',
+        color: Colors.black,
         p: { xs: 4, md: 10 },
         pt: 12,
         pb: 12,
@@ -32,9 +32,12 @@ export default function Footer() {
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">About us</FooterTitle>
           <Typography variant="caption2">
-            Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusm tempor
-            incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud.
+            This website is a semester project done for the partial fulfillment of the grade for the end semester examination of the third semester.
+            Thanks to members:
+            Sushan Shrestha,
+            Dipin Panta,
+            Farman Mansoor and
+            Gaurab Wagle.
           </Typography>
           <Box
             sx={{
@@ -42,9 +45,15 @@ export default function Footer() {
               color: Colors.dove_gray,
             }}
           >
-            <FacebookIcon sx={{ mr: 1 }} />
-            <TwitterIcon sx={{ mr: 1 }} />
-            <InstagramIcon />
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <FacebookIcon sx={{ mr: 1 }} />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+              <TwitterIcon sx={{ mr: 1 }} />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon />
+            </a>
           </Box>
         </Grid>
         <Grid item md={6} lg={2}>
@@ -52,25 +61,38 @@ export default function Footer() {
           <List>
             <ListItemText>
               <Typography lineHeight={2} variant="caption2">
-                About Us
+                <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => {
+                  e.preventDefault();
+                  window.open('about:blank').document.write('Yet to build');
+                }}>About Us</a>
               </Typography>
             </ListItemText>
             <ListItemText>
               <Typography lineHeight={2} variant="caption2">
-                Order Tracking
+                <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => {
+                  e.preventDefault();
+                  window.open('about:blank').document.write('Yet to build');
+                }}>Order Tracking</a>
               </Typography>
             </ListItemText>
             <ListItemText>
               <Typography lineHeight={2} variant="caption2">
-                Privacy &amp; Policy
+                <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => {
+                  e.preventDefault();
+                  window.open('about:blank').document.write('Yet to build');
+                }}>Privacy &amp; Policy</a>
               </Typography>
             </ListItemText>
             <ListItemText>
               <Typography lineHeight={2} variant="caption2">
-                Terms &amp; Conditions
+                <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => {
+                  e.preventDefault();
+                  window.open('about:blank').document.write('Yet to build');
+                }}>Terms &amp; Conditions</a>
               </Typography>
             </ListItemText>
           </List>
+
         </Grid>
         <Grid item md={6} lg={2}>
           <FooterTitle variant="body1">my account</FooterTitle>

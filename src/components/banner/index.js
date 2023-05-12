@@ -8,15 +8,16 @@ export default function Banner() {
 
     return (
         <BannerContainer>
-            <BannerImage src="/images/banner/banner1.png"/>
+            <BannerImage src="/images/banner/LOGO.png"/>
             <BannerContent>
                 <Typography variant="h6">Huge Collection</Typography>
-                <BannerTitle variant="h2">K-Used Store</BannerTitle>
+                <BannerTitle variant="h1">K-Used Store</BannerTitle>
                 <BannerDescription variant="subtitle">
-                    Welcome to our K-Usesd Store, designed specifically for university students! We understand that as a student, you have a lot on your plate, which is why we offer a convenient one-stop-shop for all your needs.
-                    Whether you're looking for textbooks, stationery, or the latest technology, we've got you covered. 
+                    "Unlock your potential with the K-Used Store.
+                     Your go-to destination for all things academic.
+                      From books to tech, we've got you covered."
                 </BannerDescription>
-                <BannerShopButton color="primary">Shop Now</BannerShopButton>
+                <BannerShopButton color="secondary">Shop Now</BannerShopButton>
             </BannerContent>
         </BannerContainer>
     );

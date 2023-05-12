@@ -46,7 +46,7 @@ export default function SingleProductDesktop({ product, matches }) {
         <ProductActionsWrapper show={showOptions || matches}>
           <Stack direction={matches ? "row" : "column"}>
             <ProductActionButton>
-              <Tooltip placement="left" title="share this product">
+              <Tooltip placement="left" title="Share">
                 <ShareIcon color="primary" />
               </Tooltip>
             </ProductActionButton>

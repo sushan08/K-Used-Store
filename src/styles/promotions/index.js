@@ -11,16 +11,16 @@ export const PromotionsContainer = styled(Box)(({theme})=> ({
     alignItems: 'center',
     padding: '20px 0px 20px 0px',
     overflow: 'hidden',
-    background: Colors.secondary
+    background: Colors.white
 
 }));
 
 export const MessageText = styled(Typography)(({theme})=>({
-    fontFamily: '"Montez", "cursive"',
+    fontFamily: "Montez",
     [theme.breakpoints.up('md')]:{
         fontSize: '3rem',
     },
-    color: Colors.white,
+    color: Colors.black,
     fontSize: '1.5rem',
 
 }));

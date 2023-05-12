@@ -5,13 +5,15 @@ import { getFirestore, collection, addDoc, updateDoc, doc } from "firebase/fires
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB_tdr2DV8LrIaHWjgebqIzG2EA3Ew-gtY",
-  authDomain: "kustore-c0e8a.firebaseapp.com",
-  projectId: "kustore-c0e8a",
-  storageBucket: "kustore-c0e8a.appspot.com",
-  messagingSenderId: "101950527856",
-  appId: "1:101950527856:web:194c53fe1071ce740e97b5"
+  apiKey: "AIzaSyC-qwIyU22_tCEnctAB8cKiiXHzZ_nUDN8",
+  authDomain: "kused-store.firebaseapp.com",
+  projectId: "kused-store",
+  storageBucket: "kused-store.appspot.com",
+  messagingSenderId: "82256107752",
+  appId: "1:82256107752:web:868ce5fe05000e541ad15d",
+  measurementId: "G-XV14RQG3W2"
 };
+
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);

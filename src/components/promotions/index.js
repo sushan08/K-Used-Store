@@ -5,9 +5,9 @@ import { MessageText, PromotionsContainer } from "../../styles/promotions";
 
 
 const messages = [
-    "20% off on your first order" ,
+    "10% off on your first order" ,
     "Find everything you want as a Student" ,
-    "Follow us on Facebook page at K-Used Store" ,
+    "Reuse, Reduce, Recycle" ,
 ];
 
 export default function Promotions(){
@@ -39,7 +39,7 @@ export default function Promotions(){
                 direction={show ? "left" : "right"}
                 in={show}
                 timeout={{
-                    enter: 500,
+                    enter: 400,
                     exit:100
                 }}
             >

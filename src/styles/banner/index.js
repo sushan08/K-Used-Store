@@ -8,7 +8,7 @@ export const BannerContainer = styled(Box)(({ theme }) => ({
     width: '100%',
     height: '100%',
     padding: '0px 0px',
-    background: Colors.light_gray,
+    background: Colors.white,
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center'
@@ -48,7 +48,7 @@ export const BannerTitle = styled(Typography)(({ theme }) => ({
 
 export const BannerDescription = styled(Typography)(({ theme }) => ({
     lineHeight: 1.25,
-    letterSpacing: 1.25,
+    letterSpacing: 1.75,
     marginBottom: "3em",
     [theme.breakpoints.down('md')]: {
         lineHeight: 1.15,
