@@ -2,7 +2,8 @@ import 'firebase/auth';
 import { createUserWithEmailAndPassword, updateProfile, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, updateDoc, doc } from "firebase/firestore";
-
+import { getDatabase, ref } from "firebase/database";
+import {getStorage} from "firebase/storage"
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_tdr2DV8LrIaHWjgebqIzG2EA3Ew-gtY",
@@ -15,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+// export const database = getDatabase(app);
 
 async function register ({firstname, lastname, email, password}) {
 const resp= await createUserWithEmailAndPassword(
@@ -78,3 +80,4 @@ export const addCartItemToFirestore = async (userId, cartItem) => {
   }
 };
 
+export const storage = getStorage(app);
