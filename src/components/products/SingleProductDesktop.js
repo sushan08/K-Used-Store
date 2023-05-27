@@ -17,7 +17,6 @@ import useDialogModal from "../../hooks/useDialogModal";
 import ProductDetail from "../productdetail";
 import ProductMeta from "./ProductMeta";
 import useCart from "../../hooks/useCart";
-import chairImage from './chair.jpg'
 import { storage } from "../search/firebase/db";
 import {getDownloadURL, ref} from 'firebase/storage';
 
